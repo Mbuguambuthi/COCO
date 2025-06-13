@@ -4,6 +4,7 @@
     padding:  0;
     margin:  0;
     box-sizing:  border-box;
+    scroll-behavior: smooth;
 
 }
 
@@ -16,20 +17,20 @@
     --FS: 1.5rem;
 
 /* COLORS */
-    --BBCOLOR:rgb(255,255,255);
-    --ALT-BBCOLOR:: : #F8F1E9;
+    --BBCOLOR:whitesmoke;
+    --ALT-BBCOLOR:#f2be83;
     --RDCOLOR: #f00;
     --GDCOLOR:   #F4A261;
     --TXTCOLOR: #1A1A1A;
-    --PURPCOLOR: #2E1A47
-
-;
-;
-
+    --PURPCOLOR: #2E1A47;
 
     /*HEADER */
     --HEADER-BBCOLOR: #F4A261;
     --HEADER-COLOR: var(--TXTCOLOR);
+
+    /* OOTHERS */
+    --PADDING: 1rem;
+    --MARGINAUTO: 0rem auto;
 }
 
 /* GENERAL STYLES */
@@ -37,7 +38,8 @@
 html{
     font-size:  var(--FS);
     font-family:  var(--FF-NUNITO);
-    background-color: var(--BBCOLOR);
+    background-color: var(--ALT-BBCOLOR);
+    
 
 }
 
@@ -49,8 +51,10 @@ body{
 
 /* HEADER */
 header{
-    background-color: var(--HEADER-BBCOLOR);
-    color: var(--HEADER-COLOR);
+    background-color: var(--PURPCOLOR);
+    color: var(--HEADER-BBCOLOR);
+    position: sticky;
+    bottom: 0;
   
 } 
 
@@ -80,7 +84,7 @@ header img{
 .menu-icon,
 .menu-icon::before,
 .menu-icon::after{
-    background-color: var(--HEADER-COLOR);
+    background-color: var(--HEADER-BBCOLOR);
     width: 40px;
     height: 5px;
     border-radius: 5px;
@@ -151,7 +155,7 @@ nav ul{
 
 nav li{
     padding:  0.5rem;
-    border-right: 1px solid var(--TXTCOLOR);
+    border-right: 1px solid var(--HEADER-BBCOLOR);
 }
 
 nav a {
@@ -163,7 +167,7 @@ nav a {
 
 nav a:any-link{
     text-decoration: none;
-    color: var(--HEADER-COLOR);
+    color: var(--HEADER-BBCOLOR);
     font-weight: bold;
 }
 
@@ -178,9 +182,10 @@ nav a:any-link{
 main{
     flex-grow: 1;
     height: 100%;
-    background-color: var(--PURPCOLOR);
+    /* background-color: var(--ALT-BBCOLOR); */
     display: flex;
     flex-flow: column nowrap;
+    position: relative;
 }
 
 .stn-main{
@@ -190,7 +195,7 @@ main{
     align-items: center;
     min-height: 100vh;
     background:  no-repeat url(/LINET/images/eneko-urunuela-I2YSmEUAgDY-unsplash.jpg)  center/cover  var(--PURPCOLOR);
-    border-bottom: 4px solid var(--GDCOLOR);
+    clip-path: polygon(50% 0%, 100% 1%, 100% 35%, 100% 94%, 75% 100%, 49% 96%, 24% 100%, 0 97%, 0% 35%, 0 0);
 }
 
 .slideshow{
@@ -228,7 +233,132 @@ flex-flow:  row ;
       width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius:  5%;
-
-  
+  border-radius:  5%;  
 }
+
+/* || ABOUT STYLES */
+
+.box{
+    display: block;
+    padding: var(--PADDING);
+    margin: var(--MARGINAUTO);
+    clear: both;
+    position: relative;
+    min-height: 40vh;
+    width: 100%;
+    border: 3px solid #000;
+  /*   background:  no-repeat url(/LINET/images/Linet\ with\ a\ static\ yoga\ pose.jpg)  center/cover  var(--PURPCOLOR); */
+
+}
+
+
+.box img{
+    float: left;
+     height: 400px;
+    width: 350px;
+    opacity: 0.95;
+
+}
+ figcaption{
+    padding: 0.5rem;
+    position: absolute;
+    bottom: -3%;
+}
+
+.box div{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    background-color: var(--GDCOLOR);
+    width: 10%;
+    min-width: 650px;
+
+
+   /*  float: right;
+    transform: translate(-200px); */
+    
+}
+
+/* ASIDE STYLES */
+
+aside{
+    display: block;
+    position: fixed;
+    right: 0;
+    
+
+}
+
+aside img{
+    height: 30px;
+    width: 30px;
+}
+
+aside ul{
+    list-style-type: none;
+    display: block;
+}
+
+aside li{
+    padding: 10px;
+}
+
+/* HOMR OGO DIV */
+
+.Home{
+    display: block;
+    background-color: var(--PURPCOLOR);
+    width: 100%;
+    text-align: center;
+    color: var(--GDCOLOR);
+    font-family: var(--FF-NUNITO);
+    font-size: 1rem;
+    font-weight: 450;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+
+
+}
+
+.Home img{
+    display: block;
+    margin: var(--MARGINAUTO);
+    width: 150px;
+    height: 150px;   
+}
+
+.Home a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Home a:hover, :focus{
+    text-decoration: underline;
+
+}
+
+/* FOOTER STYLES */
+
+footer{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--PURPCOLOR);
+    color: var(--GDCOLOR);
+    font-family: var(--FF-NUNITO);
+    font-size: 1rem;
+    font-weight: 450;
+    font-style: italic;
+
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+
+}
+
+
