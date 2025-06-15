@@ -191,6 +191,16 @@ main{
     display: flex;
     flex-flow: column nowrap;
     position: relative;
+    padding: var(--PADDING);
+}
+
+main p{
+    font-family: var(--FF-NUNITO);
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: normal;
+    word-spacing: 2px;
+    line-height: var(--LH);
 }
 
 .stn-main{
@@ -199,7 +209,7 @@ main{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background:  no-repeat url(/LINET/images/eneko-urunuela-I2YSmEUAgDY-unsplash.jpg)  center/cover  var(--PURPCOLOR);
+    background:  no-repeat url(/LINET/images/eneko-urunuela-I2YSmEUAgDY-unsplash-2.jpg)  center/contain  ;
     /* clip-path: polygon(50% 0%, 100% 1%, 100% 35%, 100% 94%, 75% 100%, 49% 96%, 24% 100%, 0 97%, 0% 35%, 0 0); */
 }
 

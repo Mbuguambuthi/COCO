@@ -25,6 +25,8 @@
     --PURPCOLOR: #2E1A47;
     --H1COLOR: #FF4040;
     --BLENDRD:  lch(57.36% 83.59 32.42 / 0.404);
+    --LIGHTGRAY: #edebec;
+    --DARKGRAY:#f2f1eb;
 
     /*HEADER */
     --HEADER-BBCOLOR: #F4A261;
@@ -33,7 +35,7 @@
     /* OOTHERS */
     --PADDING: 1rem;
     --MARGINAUTO: 0rem auto;
-    --LH: 1.2;
+    --LH: 1.6;
 
 }
 
@@ -190,6 +192,17 @@ main{
     display: flex;
     flex-flow: column nowrap;
     position: relative;
+    padding: var(--PADDING);
+
+}
+
+main p{
+    font-family: var(--FF-NUNITO);
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: normal;
+    word-spacing: 2px;
+    line-height: var(--LH);
 }
 
 /* SECTION | */
@@ -201,52 +214,64 @@ h2{
     text-align: center;
 }
 
-/* .about{
-
-    
+.about{
+    display: flex;
+    flex-flow: column nowrap;
+    /* gap: 0.5rem;
+    flex-flow: row wrap;
+    justify-content: space-between; */
+    width: 100%;
+    position: relative;
 }
 
-.about h2{
+.coco{
+    display: flex;
+    gap: 0.5rem;
+    flex-flow: row  nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 
-} */
+}
+
+.coco p{
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    text-align: justify;
+}
+
+
 .about video{
+    display: flex;
     height: 300px;
     width: 240px;
     object-fit: cover;
     border-radius: 10px;
 
+    /* position: absolute; */
+    float: right;
+
 
 }
-
-./* coco{
-     height: 400px;
-    width: 500px;
-    
-    
-
-}
-
-.video{
- height: 400px;
-    width: 500px;
-    float:right;
-    
-} */
 
 
 /* SECTION || */
 
-.Yoga{
-    text-align: justify;
+.yoga{
+    clear: right;
     line-height: var(--LH);
 }
 
-section  dl{
-    list-style-type: circle;
-
+.yoga h4{
+    text-align: center;
 }
 
-.Yoga img{
+.yoga p{
+    text-align: justify;
+}
+
+
+.yoga img{
     border-radius: 50%;
     height: 400px;
     width: 400px;
@@ -258,15 +283,70 @@ section  dl{
 
 /* SECTION ||| */
 
-.community video{
-    height: 400px;
-    width: 764px;
-    object-fit: cover;
-    border-radius: 15px;
+.community{
+    display: flex;
+    flex-flow: column-reverse;
+    gap: 0.5rem;
+    margin: 10px;
+    padding: 10px;
+   
+    
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+
+
 
 }
 
 
+.container video{
+    height: 400px;
+    width: 764px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 10px auto;
+    position: relative;
+
+
+}
+
+.CTA-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--FF-NUNITO);
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--BBCOLOR);
+    border: 2px solid var(--BBCOLOR);
+    padding: 10px;
+    text-align: center;
+    margin: var(--MARGINAUTO);
+}
+
+.CTA-btn:hover, :focus{
+    border: 1px solid var(--H1COLOR);
+}
+
+video[poster]{
+    object-fit: cover;
+}
+
+.ovarlay{
+    position: absolute;
+    transform: translateY(155px);
+}
+
+.ovarlay img{
+    height: 80px;
+    width: 80px;
+}
 
 
 /* ASIDE STYLES */
@@ -275,8 +355,6 @@ aside{
     display: block;
     position: fixed;
     right: 0;
-    
-
 }
 
 aside img{
@@ -293,7 +371,7 @@ aside li{
     padding: 10px;
 }
 
-/* HOMR OGO DIV */
+/* HOMR LOGO DIV */
 
 .Home{
     display: block;
@@ -307,8 +385,6 @@ aside li{
     font-style: italic;
     line-height: 1.2;
     letter-spacing: 1.5px;
-
-
 }
 
 .Home img{
@@ -347,6 +423,8 @@ footer{
     bottom: 0;
     width: 100%;
     height: 25px;
+    padding: var(--PADDING);
+
 }
 
 footer a{
