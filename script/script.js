@@ -3,6 +3,8 @@ const overlay = document.querySelector('.overlay');
 const playButton = document.getElementById('playButton');
 
 playButton.addEventListener('click', play);
+video.addEventListener('click', play);
+
 
 function play(){
     if(video.play){

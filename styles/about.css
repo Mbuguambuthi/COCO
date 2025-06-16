@@ -27,6 +27,11 @@
     --BLENDRD:  lch(57.36% 83.59 32.42 / 0.404);
     --LIGHTGRAY: #edebec;
     --DARKGRAY:#f2f1eb;
+    --WARMGRAY: #d7d3d8;
+    --ALTWARMGRAY: #c2bdc4;
+    --DARKBLUR: #34495e;
+    --REBECCAPURPLE: #663399;
+    --SOFTBLUE: #7B68EE;
 
     /*HEADER */
     --HEADER-BBCOLOR: #F4A261;
@@ -44,7 +49,8 @@
 html{
     font-size:  var(--FS);
     font-family:  var(--FF-NUNITO);
-    background-color: var(--ALT-BBCOLOR);
+    /* background-color: var(--ALT-BBCOLOR); */
+    background-color: var(--LIGHTGRAY);
     
 
 }
@@ -57,8 +63,10 @@ body{
 
 /* HEADER */
 header{
-    background-color: var(--PURPCOLOR);
-    color: var(--HEADER-BBCOLOR);
+    /* background-color: var(--PURPCOLOR); */
+    /* background-color: #34495e; */
+    background-color: var(--WARMGRAY);
+    color: var(--TXTCOLOR);
     position: sticky;
     bottom: 0;
   
@@ -90,7 +98,7 @@ header img{
 .menu-icon,
 .menu-icon::before,
 .menu-icon::after{
-    background-color: var(--HEADER-BBCOLOR);
+    background-color: var(--TXTCOLOR);
     width: 40px;
     height: 5px;
     border-radius: 5px;
@@ -161,7 +169,7 @@ nav ul{
 
 nav li{
     padding:  0.5rem;
-    border-right: 1px solid var(--HEADER-BBCOLOR);
+    border-right: 1px solid var(--TXTCOLOR);
 }
 
 nav a {
@@ -173,7 +181,7 @@ nav a {
 
 nav a:any-link{
     text-decoration: none;
-    color: var(--HEADER-BBCOLOR);
+    color: var(--TXTCOLOR);
     font-weight: bold;
 }
 
@@ -375,10 +383,10 @@ aside li{
 
 .Home{
     display: block;
-    background-color: var(--PURPCOLOR);
+    background-color: var(--ALTWARMGRAY);
     width: 100%;
     text-align: center;
-    color: var(--GDCOLOR);
+    color: var(--TXTCOLOR);
     font-family: var(--FF-NUNITO);
     font-size: 1rem;
     font-weight: 450;
@@ -413,8 +421,9 @@ footer{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--PURPCOLOR);
-    color: var(--GDCOLOR);
+    /* background-color: var(--PURPCOLOR); */
+    background-color: var(--ALTWARMGRAY);
+    color: var(--TXTCOLOR);
     font-family: var(--FF-NUNITO);
     font-size: 1rem;
     font-weight: 450;
@@ -428,7 +437,7 @@ footer{
 }
 
 footer a{
-    color: var(--GDCOLOR);
+    color: var(--TXTCOLOR);
     text-decoration: none;
 }
 

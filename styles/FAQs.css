@@ -33,8 +33,6 @@
     --REBECCAPURPLE: #663399;
     --SOFTBLUE: #7B68EE;
 
-;
-
     /*HEADER */
     --HEADER-BBCOLOR: #F4A261;
     --HEADER-COLOR: var(--TXTCOLOR);
@@ -43,6 +41,7 @@
     --PADDING: 1rem;
     --MARGINAUTO: 0rem auto;
     --LH: 1.6;
+
 }
 
 /* GENERAL STYLES */
@@ -50,10 +49,8 @@
 html{
     font-size:  var(--FS);
     font-family:  var(--FF-NUNITO);
-   /*  background-color: var(--ALT-BBCOLOR); */
-  /*  background-color: var(--DARKGRAY); */
+    /* background-color: var(--ALT-BBCOLOR); */
     background-color: var(--LIGHTGRAY);
-
     
 
 }
@@ -67,6 +64,7 @@ body{
 /* HEADER */
 header{
     /* background-color: var(--PURPCOLOR); */
+    /* background-color: #34495e; */
     background-color: var(--WARMGRAY);
     color: var(--TXTCOLOR);
     position: sticky;
@@ -203,9 +201,10 @@ main{
     flex-flow: column nowrap;
     position: relative;
     padding: var(--PADDING);
+
 }
 
-main p{
+main ol, ul, li{
     font-family: var(--FF-NUNITO);
     font-size: inherit;
     font-weight: inherit;
@@ -213,173 +212,44 @@ main p{
     word-spacing: 2px;
     line-height: var(--LH);
 }
+/* ENTER FAQS CODE HERE! */
 
-.stn-main{
-   display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background:  no-repeat url(/LINET/images/eneko-urunuela-I2YSmEUAgDY-unsplash-2.jpg)  center/contain  ;
-    /* clip-path: polygon(50% 0%, 100% 1%, 100% 35%, 100% 94%, 75% 100%, 49% 96%, 24% 100%, 0 97%, 0% 35%, 0 0); */
-}
-
-.CTA-button{
-
-    /* display: block;
-    margin: var(--MARGINAUTO); */
-    font-family: var(--FF-NUNITO);
-    font-weight: 400;
-    font-size: 1.3rem;
-    text-decoration: none;
-    color: var(--BBCOLOR);
-    border: 2px solid var(--BBCOLOR);
-    padding: 20px;
-    z-index: 1;
-    position: absolute;
-}
-
-
-.CTA-button:hover, :focus{
-    border: 5px solid var(--H1COLOR);
-
-    
-}
-
-.stn-main h1{
-    color: var(--PURPCOLOR);
-    text-align: center;
-    font-family: var(--FF-EXILE);
-    font-size: 2rem;
-    font-weight: 100;
-
-
-}
-
-.slideshow{
+article{
     display: flex;
-    flex-flow: row;
-    gap:0.5rem ;
-
-   /*  display: block; */
-  width: 100%;
-  max-width: 800px;
-  height: 400px;
-  position: relative;
-/*   margin: 2rem  auto; */
- /*  border: 2px solid var(--TXTCOLOR); */
-
-}
-
-.slide{
- display: flex;
-flex-flow:  row ;
-
-   /*  margin: var(--MARGINAUTO);
-    float: left; */
-
-}
-
-
-.one{
-  height: 100%;
-  opacity: 0.3;
-  width: 50%;
-}
-
-
-.two{
-  width: 50%;
-  height: 100%;
-  opacity: 0.5;  
-}
-
-.slide video{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius:  5%;  
-}
-
-/* || ABOUT STYLES */
-
-.box{
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
+    flex-flow: column nowrap;
     gap: 0.5rem;
-    flex-flow: row wrap;
-    padding: var(--PADDING);
-
-}
-
-.box h2{
-    writing-mode: vertical-lr;
-    color: var(--H1COLOR);
-    text-align: center;
-    display: none;
-}
-
-.box div{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    /* border: 2px solid #000; */
-    height: 400px;
-    width: 400px;
-    /* background-color:  lch(57.36% 83.59 32.42 / 0.404); */
-    border-radius: 20px;
-}
-
-
-
-.Image img{
-    height: 400px;
-    width: 400px;;
-    border-radius: 20px;
-
-}
-
-.Image{
-    display: flex;
-    justify-content: center;
-    box-shadow:  2px 4px 4px 2px #CCC;
-
-    
-}
-
-
-.content{
-      display: flex;
-    justify-content: center;
     align-items: center;
-    /* padding: 5px; */
-    height: 100%;
-    max-height: 250px;
-    color: var(--TXTCOLOR);
-    /* border: 3px solid var(--ALT-BBCOLOR); */
-    margin-top: 2.5rem;
-
-}
-
-.CTA-btn{
-    font-family: var(--FF-NUNITO);
-    font-weight: 400;
-    font-size: 1.3rem;
-    text-decoration: none;
-    color: var(--PURPCOLOR);
-    border: 2px solid var(--PURPCOLOR);
     padding: 10px;
+
+}
+article h1{
+    text-align: center;
 }
 
+article ol{
+    display: block;
+    margin: var(--MARGINAUTO);
+    list-style-type: none;
+    padding-left: 0;
 
-.CTA-btn:hover, :focus{
-    border: 1px solid var(--H1COLOR);
-
-    
 }
 
+article ul{
+    display: none;
+    list-style-type: none;
+}
 
+span{
+    padding-right: 5px;
+}
+
+span img{
+    height: 25px;
+    width: 25px;
+
+}
+
+/* ADD ANIMATION SLIDE TO  DISPLAY THE ANSWERS. */
 
 /* ASIDE STYLES */
 
@@ -387,8 +257,6 @@ aside{
     display: block;
     position: fixed;
     right: 0;
-    
-
 }
 
 aside img{
@@ -405,7 +273,7 @@ aside li{
     padding: 10px;
 }
 
-/* HOMR OGO DIV */
+/* HOMR LOGO DIV */
 
 .Home{
     display: block;
@@ -419,8 +287,6 @@ aside li{
     font-style: italic;
     line-height: 1.2;
     letter-spacing: 1.5px;
-
-
 }
 
 .Home img{
@@ -449,6 +315,7 @@ footer{
     justify-content: center;
     align-items: center;
     text-align: center;
+    /* background-color: var(--PURPCOLOR); */
     background-color: var(--ALTWARMGRAY);
     color: var(--TXTCOLOR);
     font-family: var(--FF-NUNITO);
@@ -459,13 +326,14 @@ footer{
     bottom: 0;
     width: 100%;
     height: 25px;
+    padding: var(--PADDING);
+
 }
 
 footer a{
     color: var(--TXTCOLOR);
     text-decoration: none;
 }
-
 
 /* END! */
 
