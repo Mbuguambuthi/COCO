@@ -331,8 +331,8 @@ h2{
     font-weight: 400;
     font-size: 1.3rem;
     text-decoration: none;
-    color: var(--BBCOLOR);
-    border: 2px solid var(--BBCOLOR);
+    color: var(--PURPCOLOR);
+    border: 2px solid var(--PURPCOLOR);
     padding: 10px;
     text-align: center;
     margin: var(--MARGINAUTO);
@@ -346,12 +346,12 @@ video[poster]{
     object-fit: cover;
 }
 
-.ovarlay{
+.overlay{
     position: absolute;
     transform: translateY(155px);
 }
 
-.ovarlay img{
+.overlay img{
     height: 80px;
     width: 80px;
 }

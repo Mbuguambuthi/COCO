@@ -214,6 +214,35 @@ main p{
 }
 /* ENTER CONTACT CODE HERE! */
 
+article{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.CTA-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--FF-NUNITO);
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--PURPCOLOR);
+    border: 2px solid var(--PURPCOLOR);
+    padding: 10px;
+    text-align: center;
+    margin: var(--MARGINAUTO);
+}
+
+.CTA-btn:hover, :focus{
+    border: 1px solid var(--H1COLOR);
+}
+
+
 /* ASIDE STYLES */
 
 aside{
