@@ -198,7 +198,7 @@ nav a:any-link{
 /* MAIN */
 
 main{
-    flex-grow: 1;
+    
     height: 100%;
     /* background-color: var(--ALT-BBCOLOR); */
     display: flex;
@@ -260,7 +260,7 @@ article{
     
     display: flex;
     flex-flow: column wrap;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
     padding: 1rem;
@@ -301,6 +301,27 @@ article{
 
 }
 
+.container{
+    display: block;
+    margin: 30px;
+    padding: 10px;
+}
+
+.container h3{
+    text-align: left;
+    padding: 5px;
+}
+
+.container ol{
+    list-style-type: circle;
+}
+
+.M-pesa{
+    border: 2px solid #ccc;
+    height: 100px;
+    width: 350px;
+    border-radius: 10px;
+}
 
 /* FORM */
 .form{
@@ -320,7 +341,7 @@ fieldset{
     width: 100%;
     height: 100%;
     padding: 10px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border-radius: 10px;
 
 }
@@ -336,13 +357,22 @@ legend{
 
 input{
     width: 150px;  
+    height: 25px;
 }
 
 input:hover{
-    background-color: var(--ALT-BBCOLOR);
+    background-color: bisque;
 }
 
-.submit{
+textarea:hover{
+    background-color: bisque;
+
+}
+/* FIX THE ERROR THAT IS CAUSING A MAGNIFICATION */
+
+/* .submit */
+
+button{
     padding: 10px;
     width: 70px;
     margin: 5px auto;
@@ -352,8 +382,6 @@ input:hover{
 .submit:hover, :focus{
     border: 2px solid var(--H1COLOR);
     text-transform: uppercase;
-
-
 }
 /* ASIDE STYLES */
 
