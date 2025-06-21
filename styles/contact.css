@@ -93,6 +93,7 @@ header img{
     align-items: center;
     border: #000;
     position: relative;
+
 }
 
 .menu-icon,
@@ -104,6 +105,9 @@ header img{
     border-radius: 5px;
     transition: all 0.5s;
     position: absolute;
+    
+
+
 }
 
 .menu-icon::before,
@@ -170,7 +174,7 @@ nav ul{
 }
 
 nav li{
-    padding:  0.5rem;
+    padding: 15px;
     border-right: 1px solid var(--TXTCOLOR);
 }
 
