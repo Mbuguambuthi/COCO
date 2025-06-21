@@ -51,3 +51,19 @@ video.addEventListener('click', () =>{
         video.pause();
     }
 })
+
+/* FAQS */
+
+/* const toggles = document.querySelectorAll("ol > li > span");
+
+toggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const listItem = toggle.parentElement.querySelector(".listitem");
+
+    // Toggle 'open' class to animate max-height
+    if(listItem){
+    listItem.classList.toggle("open");
+    }
+  });
+});
+ */
