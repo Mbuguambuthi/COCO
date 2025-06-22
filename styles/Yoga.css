@@ -48,7 +48,7 @@
 
 @media screen and (max-width: 991px) {
     :root{
-         --FS: 1.5rem;
+         --FS: 1rem;
           /* OOTHERS */
     --PADDING: 0.5rem;
     --MARGINAUTO: 0rem auto;
@@ -72,7 +72,8 @@ html{
 body{
     display:  flex;
     flex-flow:  column;
-    height: auto;
+    height: 100%;
+    width: 100%;
 }
 
 /* HEADER */
@@ -92,8 +93,9 @@ header{
 }
 
 header img{
-    width: 75px;;
-    height: 75px;
+
+    max-width: 75px;;
+    max-height: 75px;
 }
 
 .menu-button{
@@ -111,8 +113,8 @@ header img{
 .menu-icon::before,
 .menu-icon::after{
     background-color: var(--TXTCOLOR);
-    width: 40px;
-    height: 5px;
+    max-width: 40px;
+    max-height: 5px;
     border-radius: 5px;
     transition: all 0.5s;
     position: absolute;
@@ -286,12 +288,29 @@ h2{
 
 .yoga img{
     border-radius: 50%;
-    height: 400px;
-    width: 400px;
+    height: 100%;
+    max-height: 250px;
+    width: 100%;
+    max-width: 250px;
     float: left;
     shape-outside: circle(50% at 50% 50%);    
     shape-margin: 15px;
 
+}
+
+@media screen and (max-width: 991) {
+    
+    .yoga img{
+    border-radius: 50%;
+    height: 100%;
+    max-height: 150px;
+    width: 100%;
+    max-width: 150px;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);    
+    shape-margin: 15px;
+
+}
 }
 
 /* SECTION ||| */
@@ -299,7 +318,7 @@ h2{
 .community{
     display: flex;
     flex-flow: column-reverse;
-    gap: 0.5rem;
+    gap: 1rem;
     margin: 10px;
     padding: 10px;
    
@@ -312,11 +331,9 @@ h2{
     display: flex;
     justify-content: center;
 
-
-
 }
 
-
+/* USE MAX-LENGTH */
 .container video{
     height: 400px;
     width: 764px;
@@ -371,8 +388,10 @@ aside{
 }
 
 aside img{
-    height: 30px;
-    width: 30px;
+    height: 100%;
+    max-height: 30px;
+    width: 100%;
+    max-width: 30px;
 }
 
 aside ul{
@@ -417,12 +436,38 @@ aside li{
 
 }
 
+@media screen and (max-width: 991px) {
+    
+.Home{
+    display: block;
+    background-color: var(--ALTWARMGRAY);
+    width: 100%;
+    text-align: center;
+    color: var(--TXTCOLOR);
+    font-family: var(--FF-NUNITO);
+    font-size: 0.8rem;
+    font-weight: 450;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.Home img{
+    display: block;
+    margin: var(--MARGINAUTO);
+    width: 100%;
+    max-width: 130px;
+    height: 100%;
+    max-height: 130px;   
+}
+}
+
 /* FOOTER STYLES */
 
 footer{
     display: flex;
     flex-flow: column wrap;
-    gap: 0.5rem;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
     text-align: center;

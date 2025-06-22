@@ -18,7 +18,7 @@
 
 /* COLORS */
     --BBCOLOR:whitesmoke;
-    --ALT-BBCOLOR:#f2be83;
+    --ALT-BBCOLOR:hsla(31, 32%, 85%, 0.493);
     --RDCOLOR: #f00;
     --GDCOLOR:   #F4A261;
     --TXTCOLOR: #1A1A1A;
@@ -32,6 +32,7 @@
     --DARKBLUR: #34495e;
     --REBECCAPURPLE: #663399;
     --SOFTBLUE: #7B68EE;
+    --BISQUE: bisque;
 
     /*HEADER */
     --HEADER-BBCOLOR: #F4A261;
@@ -48,13 +49,59 @@
 
 @media screen and (max-width: 991px) {
     :root{
-         --FS: 1.5rem;
+         --FS: 1rem;
           /* OOTHERS */
-    --PADDING: 0.5rem;
+    --PADDING: 15px;
     --MARGINAUTO: 0rem auto;
     --LH: 1.3;
 
     }
+
+    body{
+    display:  flex;
+    flex-flow:  column;
+    height: auto;
+    width: 100%;
+    height: 100%;
+}
+
+    header{
+    /* background-color: var(--PURPCOLOR); */
+    /* background-color: #34495e; */
+    background-color: var(--WARMGRAY);
+    color: var(--TXTCOLOR);
+    width: 100%;
+  
+} 
+
+    .header-title-line{
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    flex-flow:  row nowrap;
+    justify-content: space-between;
+}
+
+
+    header img{
+    width: 100%;
+    max-width: 75px;;
+    height: 100%;
+    max-height:75px;
+}
+
+
+nav {
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+}
+
+nav li{
+    padding:  10px;
+    border-right: 1px solid var(--TXTCOLOR);
+}
+   
     
 }
 
@@ -73,6 +120,8 @@ body{
     display:  flex;
     flex-flow:  column;
     height: auto;
+    width: 100%;
+    height: 100%;
 }
 
 /* HEADER */
@@ -81,6 +130,7 @@ header{
     /* background-color: #34495e; */
     background-color: var(--WARMGRAY);
     color: var(--TXTCOLOR);
+    width: 100%;
   
 } 
 
@@ -92,8 +142,10 @@ header{
 }
 
 header img{
-    width: 75px;;
-    height: 75px;
+    width: 100%;
+    max-width: 75px;;
+    height: 100%;
+    max-height:75px;
 }
 
 .menu-button{
@@ -111,8 +163,10 @@ header img{
 .menu-icon::before,
 .menu-icon::after{
     background-color: var(--TXTCOLOR);
-    width: 40px;
-    height: 5px;
+    width: 100%;
+   max-width: 40px;
+   height: 100%;
+    max-height: 5px;
     border-radius: 5px;
     transition: all 0.5s;
     position: absolute;
@@ -154,6 +208,7 @@ nav {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s ease-in-out;
+    width: 100%;
 }
 
 /* When header is hovered or focused */
@@ -202,6 +257,7 @@ nav a:focus {
 main{
     
     height: 100%;
+    width: 100%;
     /* background-color: var(--ALT-BBCOLOR); */
     display: flex;
     flex-flow: column nowrap;
@@ -223,10 +279,11 @@ main p{
 article{
     display: flex;
     flex-flow: column wrap;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 1rem;
     
 }
 
@@ -241,7 +298,7 @@ article{
 
 .CTA-btn{
     display: flex;
-    flex-direction: column;
+    flex-direction: column nowrap;
     justify-content: center;
     font-family: var(--FF-NUNITO);
     font-weight: 400;
@@ -254,7 +311,8 @@ article{
     margin: var(--MARGINAUTO);
 }
 
-.CTA-btn:hover, :focus{
+.CTA-btn:hover, 
+.CTA-btn:focus{
     border: 1px solid var(--H1COLOR);
 }
 
@@ -265,7 +323,8 @@ article{
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    margin: 30px;
+   /*  padding: 1rem; */
 }
 
 .list ul{
@@ -303,10 +362,22 @@ article{
 
 }
 
+/* FORM */
+
+
 .container{
-    display: block;
-    margin: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    /* margin: 30px; */
     padding: 10px;
+    /* border: 1px solid #999; */
+    border-radius: 5px;
+    background-color: var(--ALT-BBCOLOR);
+
 }
 
 .container h3{
@@ -315,7 +386,7 @@ article{
 }
 
 .container ol{
-    list-style-type: circle;
+    list-style-type: none;
 }
 
 .M-pesa{
@@ -325,15 +396,25 @@ article{
     border-radius: 10px;
 }
 
-/* FORM */
+
 .form{
-    display: block;
-    margin: var(--MARGINAUTO);
-    min-height: 300px;
+    display: flex;
+    gap: 1em;
+    flex-flow:row wrap;
+    justify-content: space-around;
+    align-items: center;
+       /* display: block;
+    margin: 10px auto; */
+    
 }
 
 .form p{
-    display: block;
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -344,7 +425,9 @@ fieldset{
     height: 100%;
     padding: 10px;
     /* margin: 0 auto; */
-    border-radius: 10px;
+    border-radius: 5px;
+    background-color: var(--ALT-BBCOLOR);
+
 
 }
 
@@ -363,28 +446,227 @@ input{
 }
 
 input:hover{
-    background-color: bisque;
+    background-color: var(--BISQUE);
 }
 
 textarea:hover{
-    background-color: bisque;
+    background-color: var(--BISQUE);
 
 }
-/* FIX THE ERROR THAT IS CAUSING A MAGNIFICATION */
+
 
 /* .submit */
 
-button{
+.submit{
+    display: block;
     padding: 10px;
-    width: 70px;
-    margin: 5px auto;
+    width: 100%;
+    max-width: 100px;
+    margin: 1rem auto;
+     font-weight: bold;
+    border-radius: 5px;
+    background-color: var(--PURPCOLOR);
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
 
 }
 
-.submit:hover, :focus{
+.submit:hover,
+.submit:focus{
     border: 2px solid var(--H1COLOR);
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 991px) {
+    
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.maps {
+    border: 2px solid #999;
+    width: 100%;
+    max-width: 90vw;
+    object-fit: cover;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.CTA-btn {
+    display: inline-block;
+    font-family: var(--FF-NUNITO);
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--PURPCOLOR);
+    border: 2px solid var(--PURPCOLOR);
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    margin: 1rem auto;
+    border-radius: 5px;
+}
+
+.CTA-btn:hover,
+.CTA-btn:focus {
+    border: 1px solid var(--H1COLOR);
+}
+
+.Contact {
+    display: flex;
+    flex-direction: column wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.list ul {
+    padding-left: 0;
+    text-align: center;
+}
+
+.list li {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.list a {
+    color: var(--REBECCAPURPLE);
+    outline: none;
+}
+
+.list a:active {
+    color: var(--H1COLOR);
+}
+
+.list a:visited {
+    color: var(--HEADER-BBCOLOR);
+}
+
+.list a:hover {
+    color: var(--RDCOLOR);
+    text-decoration: none;
+}
+
+/* FORM */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--ALT-BBCOLOR);
+    border-radius: 10px;
+    
+}
+
+.container h3 {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.container ol {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.M-pesa {
+    border: 2px solid #ccc;
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form p {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+fieldset {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--ALT-BBCOLOR);
+}
+
+fieldset:hover {
+    border: 1px solid var(--RDCOLOR);
+}
+
+legend {
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    max-width: 300px;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input:hover,
+textarea:hover {
+    background-color: bisque;
+}
+
+/* SUBMIT BUTTON */
+
+.submit {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    width: 100%;
+    max-width: 150px;
+    margin: 1rem auto;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: var(--PURPCOLOR);
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.submit:hover,
+.submit:focus {
+    text-transform: uppercase;
+}
+}
+
+
+
 /* ASIDE STYLES */
 
 aside{
@@ -394,8 +676,10 @@ aside{
 }
 
 aside img{
-    height: 30px;
-    width: 30px;
+    height: 100%;
+    max-height: 30px;
+    width: 100%;
+    max-width: 30px;
 }
 
 aside ul{
@@ -426,8 +710,10 @@ aside li{
 .Home img{
     display: block;
     margin: var(--MARGINAUTO);
-    width: 150px;
-    height: 150px;   
+    width: 100%;
+    max-width: 150px;
+    height: 100%;
+    max-height: 150px;   
 }
 
 .Home a {
@@ -435,9 +721,36 @@ aside li{
     color: inherit;
 }
 
-.Home a:hover, :focus{
+.Home a:hover, 
+.Home a:focus{
     text-decoration: underline;
 
+}
+
+@media screen and (max-width: 991px) {
+    
+.Home{
+    display: block;
+    background-color: var(--ALTWARMGRAY);
+    width: 100%;
+    text-align: center;
+    color: var(--TXTCOLOR);
+    font-family: var(--FF-NUNITO);
+    font-size: 0.8rem;
+    font-weight: 450;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.Home img{
+    display: block;
+    margin: var(--MARGINAUTO);
+    width: 100%;
+    max-width: 130px;
+    height: 100%;
+    max-height: 130px;   
+}
 }
 
 /* FOOTER STYLES */
@@ -445,7 +758,7 @@ aside li{
 footer{
     display: flex;
     flex-flow: column wrap;
-    gap: 0.5rem;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
     text-align: center;

@@ -285,10 +285,11 @@ aside{
 }
 
 aside img{
-    height: 30px;
-    width: 30px;
+    height: 100%;
+    max-height: 30px;
+    width: 100%;
+    max-width: 30px;
 }
-
 aside ul{
     list-style-type: none;
     display: block;
@@ -317,8 +318,10 @@ aside li{
 .Home img{
     display: block;
     margin: var(--MARGINAUTO);
-    width: 150px;
-    height: 150px;   
+    width: 100%;
+    max-width: 150px;
+    height: 100%;
+    max-height: 150px;   
 }
 
 .Home a {
@@ -331,12 +334,38 @@ aside li{
 
 }
 
+@media screen and (max-width: 991px) {
+    
+.Home{
+    display: block;
+    background-color: var(--ALTWARMGRAY);
+    width: 100%;
+    text-align: center;
+    color: var(--TXTCOLOR);
+    font-family: var(--FF-NUNITO);
+    font-size: 0.8rem;
+    font-weight: 450;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.Home img{
+    display: block;
+    margin: var(--MARGINAUTO);
+    width: 100%;
+    max-width: 130px;
+    height: 100%;
+    max-height: 130px;   
+}
+}
+
 /* FOOTER STYLES */
 
 footer{
     display: flex;
     flex-flow: column wrap;
-    gap: 0.5rem;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
     text-align: center;
