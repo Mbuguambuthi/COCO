@@ -60,27 +60,26 @@
 
 /* GENERAL STYLES */
 
+
 html{
     font-size:  var(--FS);
     font-family:  var(--FF-NUNITO);
-    /* background-color: var(--ALT-BBCOLOR); */
     background-color: var(--LIGHTGRAY);
-    
 
 }
 
 body{
     display:  flex;
     flex-flow:  column;
-    height: auto;
+    height: 100%;
+    width: 100%;
 }
 
 /* HEADER */
 header{
-    /* background-color: var(--PURPCOLOR); */
-    /* background-color: #34495e; */
     background-color: var(--WARMGRAY);
     color: var(--TXTCOLOR);
+    width: 100%;
   
 } 
 
@@ -92,8 +91,9 @@ header{
 }
 
 header img{
-    width: 75px;;
-    height: 75px;
+
+    max-width: 75px;
+    max-height: 75px;
 }
 
 .menu-button{
@@ -111,8 +111,10 @@ header img{
 .menu-icon::before,
 .menu-icon::after{
     background-color: var(--TXTCOLOR);
-    width: 40px;
-    height: 5px;
+    width: 100%;
+    max-width: 40px;
+    height: 100%;
+    max-height: 5px;
     border-radius: 5px;
     transition: all 0.5s;
     position: absolute;
@@ -184,7 +186,7 @@ nav a:any-link{
 
 nav a {
     transition: transform 0.2s ease-in-out;
-     display: block;
+    display: block;
     margin: auto;
     text-align: center;
     width: 80%;
@@ -196,11 +198,13 @@ nav a:focus {
     transform: scale(1.2);
 }
 
+
 /* MAIN */
 
 main{
     flex-grow: 1;
     height: 100%;
+    width: 100%;
     /* background-color: var(--ALT-BBCOLOR); */
     display: flex;
     flex-flow: column nowrap;
@@ -219,10 +223,11 @@ main p{
 
 .stn-main{
    display: flex;
+   gap: 1rem;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+   /*  min-height: 100vh; */
     background:  no-repeat url(/LINET/images/eneko-urunuela-I2YSmEUAgDY-unsplash-2.jpg)  center/contain  ;
     /* clip-path: polygon(50% 0%, 100% 1%, 100% 35%, 100% 94%, 75% 100%, 49% 96%, 24% 100%, 0 97%, 0% 35%, 0 0); */
 }
@@ -237,13 +242,14 @@ main p{
     text-decoration: none;
     color: var(--BBCOLOR);
     border: 2px solid var(--BBCOLOR);
-    padding: 20px;
+    padding: 10px;
     z-index: 1;
     position: absolute;
 }
 
 
-.CTA-button:hover, :focus{
+.CTA-button:hover,
+.CTA-button:focus{
     border: 5px solid var(--H1COLOR);
 
     
@@ -261,13 +267,16 @@ main p{
 
 .slideshow{
     display: flex;
-    flex-flow: row;
-    gap:0.5rem ;
+    flex-flow: column wrap;
+    gap: 1rem ;
+    align-items: center;
+    justify-content: center;
 
    /*  display: block; */
-  width: 100%;
-  max-width: 800px;
-  height: 400px;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 400px;
   position: relative;
 /*   margin: 2rem  auto; */
  /*  border: 2px solid var(--TXTCOLOR); */
@@ -275,8 +284,9 @@ main p{
 }
 
 .slide{
- display: flex;
-flex-flow:  row ;
+    display: flex;
+    flex-flow:  row wrap;
+    justify-content: center;
 
    /*  margin: var(--MARGINAUTO);
     float: left; */
@@ -286,31 +296,55 @@ flex-flow:  row ;
 
 .one{
   height: 100%;
+ /*  max-height: 300px; */
   opacity: 0.3;
-  width: 50%;
+  width: 100%;
+ /*  max-width: 240px ; */
+ position: absolute;
 }
 
 
 .two{
-  width: 50%;
-  height: 100%;
-  opacity: 0.5;  
+
+    height: 100%;
+   /*  max-height: 300px; */
+    width: 100%;
+ /*    max-width: 240px ; */
+    opacity: 0.5;  
+
 }
 
 .slide video{
-  width: 100%;
+  /* width: 100%;
+  height: 100% */
   height: 100%;
+  max-height: 400px;   
+  width: 100%;
+  max-width: 340px ;
   object-fit: cover;
   border-radius:  5%;  
 }
 
+@media screen and (max-width: 991px) {
+    .slide video{
+  /* width: 100%;
+  height: 100% */
+  height: 100%;
+  max-height: 300px;   
+  width: 100%;
+  max-width: 240px ;
+  object-fit: cover;
+  border-radius:  5%;  
+}
+    
+}
 /* || ABOUT STYLES */
 
 .box{
     display: flex;
     flex-grow: 1;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
     flex-flow: row wrap;
     padding: var(--PADDING);
 
@@ -331,24 +365,48 @@ flex-flow:  row ;
     height: 400px;
     width: 400px;
     /* background-color:  lch(57.36% 83.59 32.42 / 0.404); */
-    border-radius: 20px;
+    border-radius: 10px;
+    
 }
 
 
 
 .Image img{
-    height: 400px;
-    width: 400px;;
-    border-radius: 20px;
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
 
+}
+
+@media screen and (max-width: 991px) {
+    .box div{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    /* border: 2px solid #000; */
+    height: 400px;
+    width: 400px;
+    /* background-color:  lch(57.36% 83.59 32.42 / 0.404); */
+    border-radius: 10px;
+}
+
+.Image img{
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+
+}
+    
 }
 
 .Image{
     display: flex;
     justify-content: center;
     box-shadow:  2px 4px 4px 2px #CCC;
-
-    
 }
 
 
@@ -376,12 +434,10 @@ flex-flow:  row ;
 }
 
 
-.CTA-btn:hover, :focus{
-    border: 1px solid var(--H1COLOR);
-
-    
+.CTA-btn:hover, 
+.CTA-btn:focus{
+    border: 1px solid var(--H1COLOR);    
 }
-
 
 
 /* ASIDE STYLES */
@@ -442,7 +498,8 @@ aside li{
     color: inherit;
 }
 
-.Home a:hover, :focus{
+.Home a:hover, 
+.Home a:focus{
     text-decoration: underline;
 
 }
