@@ -231,7 +231,7 @@ main p{
     justify-content: center;
     align-items: center;
    /*  min-height: 100vh; */
-    background:  no-repeat url(/LINET/images/eneko-urunuela-I2YSmEUAgDY-unsplash-2.jpg)  center/contain  ;
+    background:  no-repeat url(/images/eneko-urunuela-I2YSmEUAgDY-unsplash-2.jpg)  center/contain  ;
     /* clip-path: polygon(50% 0%, 100% 1%, 100% 35%, 100% 94%, 75% 100%, 49% 96%, 24% 100%, 0 97%, 0% 35%, 0 0); */
 }
 
@@ -260,7 +260,7 @@ main p{
 
 .stn-main h1{
     color: var(--PURPCOLOR);
-    text-align: center;
+    /* text-align: center; */
     font-family: var(--FF-CORMO);
     font-size: 2rem;
     font-weight: 600;
