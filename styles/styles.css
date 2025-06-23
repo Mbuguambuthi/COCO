@@ -370,6 +370,8 @@ main p{
     width: 400px;
     /* background-color:  lch(57.36% 83.59 32.42 / 0.404); */
     border-radius: 10px;
+    position: relative;
+
     
 }
 
@@ -381,7 +383,6 @@ main p{
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
-
 }
 
 @media screen and (max-width: 991px) {
@@ -410,7 +411,7 @@ main p{
 .Image{
     display: flex;
     justify-content: center;
-    box-shadow:  2px 4px 4px 2px #CCC;
+   /*  box-shadow:  2px 4px 4px 2px #CCC; */
 }
 
 
