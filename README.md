@@ -22,15 +22,17 @@ COCO/
 ├── index.html          # Main landing page
 ├── services.html       # Service offerings page
 ├── contact.html        # Contact form and location map
+---FAQS,html            # Frequentky Asked questions page
 ├── styles/
 │   └── styles.css      # All custom styles
 ├── images/             # Logo and visual assets
+--- videos/             # All video assets
 └── README.md           # Project documentation
 ```
 
 ## 🛠️ Technologies Used
 
-- HTML5 & CSS3
+- HTML5 CSS3  & JAVASCRIPT
 - Google Fonts & Font Awesome
 - Google Maps Embed API
 - Netlify (for hosting)
@@ -49,29 +51,28 @@ To run this project locally:
 
 2. Open `index.html` with your browser or use Live Server in VS Code.
 
+
 No backend or build tools are required — it's a static frontend project.
 
 ## 🌐 Live Site
 
-🔗 [Visit Coco Flow Fitness on Netlify](https://cocoflowfitness.netlify.app) *(replace with your actual live link)*
+🔗 [Visit Coco Flow Fitness on Netlify](https://cocoflow.netlify.app )
 
 ## 📸 Screenshots
 
 ### 🖼 Homepage
-![Homepage Screenshot](images/homepage.png)
+![Homepage Screenshot](images/Home.png)
 
 ### 🧘 Services Page
-![Services Screenshot](images/services.png)
+![Services Screenshot](images/Service.png)
 
 ### 📍 Contact Page with Map
-![Contact Screenshot](images/contact.png)
-
-> Make sure the above images are saved in your `/images/` folder in the project directory.
+![Contact Screenshot](images/Contact.png)
 
 ## 📨 Contact
 
 Created with 💚 by **Mbugua Mbuthi**  
-📧 Email: mbugua.mbuthi@gmail.com  
+📧 Email: mbuguambuthi24@gmail.com  
 🌍 Location: Kenya  
 🔗 GitHub: [github.com/Mbuguambuthi](https://github.com/Mbuguambuthi)
 
