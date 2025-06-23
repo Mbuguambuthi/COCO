@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Exile&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Exile&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+
 
 *{
     padding:  0;
@@ -10,6 +12,7 @@
 
 :root{
     /* FONTS */
+    --FF-CORMO: 'Cormorant Garamond', serif;;
     --FF-LIBRE: "Libre Baskerville",  serif;
     --FF-ROBOTO: "Roboto", serif;
     --FF-EXILE: "Exile", serif;
@@ -285,6 +288,16 @@ article{
     text-align: center;
     padding: 1rem;
     
+}
+
+h2, h3, h4, h5, legend{
+    color: var(--PURPCOLOR);
+    text-align: center;
+    font-family: var(--FF-CORMO);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
 }
 
 .maps{

@@ -50,7 +50,7 @@
         <section class="Contact">
             
             <!-- <div class="form"> -->
-                <form action="/thank-you.html" method="POST" netlify>
+                <form name="Contact"  action="/thank-you.html" method="POST" data-netlify-recaptcha="true" netlify>
                     <fieldset>
                         <legend>PERSONAL INFO :</legend>
 
@@ -68,6 +68,7 @@
 
                         <p><textarea name="Message" id="Message" rows="4" cols="40"  title="Message">Your Message</textarea>
                             </p>
+                            <div data-netlify-recaptcha="true"></div>
                              <p>                     
                    <button type="submit" class="submit">Submit</button>
                    </p>
