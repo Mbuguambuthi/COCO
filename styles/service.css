@@ -298,7 +298,7 @@ article h3 {
 }
 
 .CTA-btn:hover,
-:focus {
+.CTA-btn:focus {
   border: 1px solid var(--H1COLOR);
 }
 
@@ -420,13 +420,13 @@ aside li {
   max-height: 150px;
 }
 
-.Home a {
+.Home a{
   text-decoration: none;
   color: inherit;
 }
 
 .Home a:hover,
-:focus {
+.Home:focus {
   text-decoration: underline;
 }
 
@@ -478,7 +478,7 @@ footer {
   padding: var(--PADDING);
 }
 
-footer a {
+footer a{
   color: var(--TXTCOLOR);
   text-decoration: none;
 }

@@ -611,7 +611,7 @@ footer {
   padding: var(--PADDING);
 }
 
-footer a {
+footer a{
   color: var(--TXTCOLOR);
   text-decoration: none;
 }
