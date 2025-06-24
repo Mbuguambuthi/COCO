@@ -231,8 +231,9 @@ main p{
     justify-content: center;
     align-items: center;
    /*  min-height: 100vh; */
-    background:  no-repeat url(/images/eneko-urunuela-I2YSmEUAgDY-unsplash-2.jpg)  center/contain  ;
-    /* clip-path: polygon(50% 0%, 100% 1%, 100% 35%, 100% 94%, 75% 100%, 49% 96%, 24% 100%, 0 97%, 0% 35%, 0 0); */
+    background:  no-repeat url(/LINET/images/eneko-urunuela-I2YSmEUAgDY-unsplash-2.jpg)  center/contain  ;
+    /* clip-path: polygon(50% 0%, 100% 1%, 100% 35%, 100% 94%, 75% 100%, 49% 96%, 24% 100%, 0 97%, 0% 35%, 0 0); */ 
+   /*  max-height: 90vh; */
 }
 
 .CTA-button{
@@ -443,6 +444,36 @@ main p{
 .CTA-btn:focus{
     border: 1px solid var(--H1COLOR);    
 }
+
+/* IMAGES CONTAINER */
+
+.poses{
+    display: grid;
+   /*  place-content: center; */
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+    gap:0;
+    background-color: #fff;
+    padding: 1rem;
+    width: 100%;
+    max-width: 50vw;
+    height: 100%;
+    margin: var(--MARGINAUTO);
+
+
+}
+
+
+/* CTA BOX */
+
+.CTA{
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
 
 
 /* ASIDE STYLES */
