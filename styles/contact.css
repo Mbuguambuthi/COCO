@@ -290,11 +290,21 @@ article{
     
 }
 
-h2, h3, h4, h5, legend{
+h2, h3, h4{
     color: var(--PURPCOLOR);
     text-align: center;
     font-family: var(--FF-CORMO);
     font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+}
+
+ h5, legend {
+    color: var(--PURPCOLOR);
+    text-align: center;
+    font-family: var(--FF-CORMO);
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.5px;
 
@@ -347,8 +357,7 @@ h2, h3, h4, h5, legend{
     display: flex;
     gap: 1rem;
     flex-flow:row wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
@@ -367,11 +376,10 @@ h2, h3, h4, h5, legend{
 }
 
 .list li{
-    display: inline-flex;
-    flex-flow: column;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-
     margin: 5px;
     padding: 5px;
 }
@@ -402,7 +410,7 @@ h2, h3, h4, h5, legend{
 
 .container{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     gap: 1rem;
     justify-content: center;
     align-items: center;
@@ -413,12 +421,12 @@ h2, h3, h4, h5, legend{
     border-radius: 5px;
     background-color: var(--ALT-BBCOLOR);
     width: 100%;
+    max-width: 500px;
+    max-height: 500px;
 
-}
 
-.container h3{
-    text-align: left;
-    padding: 5px;
+
+
 }
 
 .container ol{
@@ -427,9 +435,9 @@ h2, h3, h4, h5, legend{
 
 .M-pesa{
     border: 2px solid #ccc;
-    height: 100px;
+    height: 50px;
     width: 100%;
-    max-width: 350px;
+    max-width: 450px;
     border-radius: 10px;
     text-align: center;
 }
