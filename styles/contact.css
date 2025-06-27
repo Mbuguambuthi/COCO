@@ -320,7 +320,6 @@ legend {
 }
 
 .Contact {
-
   display: flex;
   gap: 1rem;
   flex-flow: row wrap;
@@ -467,10 +466,10 @@ textarea {
   padding: 5px;
 }
 
-input:hover,
+/* input:hover,
 textarea:hover {
-  background-color: #333;
-}
+  background-color: rgba(83, 76, 76, 0.404);
+} */
 
 /* .submit */
 
@@ -487,11 +486,13 @@ textarea:hover {
   border: none;
   text-align: center;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .submit:hover,
 .submit:focus {
   border: 2px solid var(--H1COLOR);
+  background-color: var(--RDCOLOR);
   text-transform: uppercase;
 }
 
@@ -611,7 +612,7 @@ footer {
   padding: var(--PADDING);
 }
 
-footer a{
+footer a {
   color: var(--TXTCOLOR);
   text-decoration: none;
 }

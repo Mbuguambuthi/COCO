@@ -295,11 +295,15 @@ article h3 {
   text-align: center;
   width: 200px;
   height: 50px;
+  background-color: hsla(0, 5%, 45%, 0.13);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .CTA-btn:hover,
 .CTA-btn:focus {
-  border: 1px solid var(--H1COLOR);
+  border: none;
+  background-color: var(--H1COLOR);
+  color: var(--BBCOLOR);
 }
 
 @media screen and (max-width: 991px) {
@@ -420,7 +424,7 @@ aside li {
   max-height: 150px;
 }
 
-.Home a{
+.Home a {
   text-decoration: none;
   color: inherit;
 }
@@ -478,7 +482,7 @@ footer {
   padding: var(--PADDING);
 }
 
-footer a{
+footer a {
   color: var(--TXTCOLOR);
   text-decoration: none;
 }
