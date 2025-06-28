@@ -379,7 +379,7 @@ legend {
   padding: 1rem;
   /* border: 1px solid #999; */
   border-radius: 5px;
-  background-color: var(--ALT-BBCOLOR);
+  background-color: var(--ALTWARMGRAY);
   width: 100%;
   max-width: 350px;
   height: 100%;
@@ -424,7 +424,8 @@ legend {
     max-width: 500px;
     padding: 10px;
     border-radius: 5px;
-    background-color: var(--ALT-BBCOLOR);
+    /* background-color: var(--ALT-BBCOLOR); */
+    background-color: var(--ALTWARMGRAY);
   }
 }
 
@@ -445,7 +446,7 @@ fieldset {
   max-width: 500px;
   padding: 10px;
   border-radius: 5px;
-  background-color: var(--ALT-BBCOLOR);
+  background-color: var(--ALTWARMGRAY);
 }
 
 legend {

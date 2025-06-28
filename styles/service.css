@@ -254,29 +254,35 @@ article h3 {
 }
 
 .PT {
-  background-color: var(--ALT-BBCOLOR);
+  background-color: var(--ALTWARMGRAY);
   border: 1px solid #999;
   border-radius: 10px;
-  width: 400px;
-  height: 550px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 550px;
   padding: 10px;
 }
 
 .group {
-  background-color: var(--ALT-BBCOLOR);
+  background-color: var(--ALTWARMGRAY);
   border: 1px solid #999;
   border-radius: 10px;
-  width: 400px;
-  height: 550px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 550px;
   padding: 10px;
 }
 
 .wellness {
-  background-color: var(--ALT-BBCOLOR);
+  background-color: var(--ALTWARMGRAY);
   border: 1px solid #999;
   border-radius: 10px;
-  width: 400px;
-  height: 550px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 550px;
   padding: 10px;
 }
 
@@ -308,29 +314,35 @@ article h3 {
 
 @media screen and (max-width: 991px) {
   .PT {
-    background-color: var(--ALT-BBCOLOR);
+    background-color: var(--ALTWARMGRAY);
     border: 1px solid #999;
     border-radius: 10px;
-    width: 300px;
-    height: 450px;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 550px;
     padding: 5px;
   }
 
   .group {
-    background-color: var(--ALT-BBCOLOR);
+    background-color: var(--ALTWARMGRAY);
     border: 1px solid #999;
     border-radius: 10px;
-    width: 300px;
-    height: 450px;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 550px;
     padding: 5px;
   }
 
   .wellness {
-    background-color: var(--ALT-BBCOLOR);
+    background-color: var(--ALTWARMGRAY);
     border: 1px solid #999;
     border-radius: 10px;
-    width: 300px;
-    height: 450px;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 550px;
     padding: 5px;
   }
 
